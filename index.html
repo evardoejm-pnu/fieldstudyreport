@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22: School & Community Partnerships</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #001f3f; 
+            --accent-gold: #ffcc00; 
+            --text-white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 20% 30%, #002d5a 0%, #001f3f 100%);
+            color: var(--text-white);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            flex: 1;
+            display: none;
+            padding: 2% 10%;
+            animation: fadeIn 0.8s ease-in-out;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .slide-container.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: var(--text-white);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .legal-text {
+            font-style: italic;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 30px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        span.hl {
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.5));
+            z-index: 9999;
+        }
+
+        button {
+            padding: 12px 45px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(0, 31, 63, 0.8);
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover:not(:disabled) {
+            background: var(--accent-gold);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+        }
+
+        button:disabled {
+            border-color: #444;
+            color: #444;
+            cursor: not-allowed;
+        }
+
+        .bullet-point {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .bullet-point li {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            padding: 12px;
+            background: var(--glass);
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-gold);
+            text-align: left;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            margin: 10px auto;
+            border: 2px dashed var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .img-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container active">
+        <h2>Building <span class="hl">Relationships</span> with Parents & the <span class="hl">Wider Community</span></h2>
+        <p>Facilitating Involvement in the Educative Process</p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Reference Material</h1>
+        <p>This report is based on the PPST Resource Package:</p>
+        <p style="margin-top:20px;">
+            <a href="https://www.ritq.ph/files/PPST_Support_Materials/Module22.pdf" target="_blank">Module 22 Link</a>
+        </p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Previous Discussion Recap</h1>
+        <h2>Classroom-Based Action Research <span class="hl">(CBAR)</span></h2>
+        <p>A reflective process where teachers identify <span class="hl">classroom problems</span> and implement <span class="hl">targeted interventions</span>.</p>
+    </div>
+
+    <div class="slide-container">
+        <ul class="bullet-point">
+            <li><span class="hl">Data-Driven:</span> Decisions based on specific classroom evidence.</li>
+            <li><span class="hl">Iterative:</span> Cycle of Planning, Acting, Observing, and Reflecting.</li>
+            <li><span class="hl">Empowerment:</span> Teachers as active problem-solvers.</li>
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <p>While <span class="hl">CBAR</span> focuses on issues <span class="hl">inside</span> the classroom, we now shift to the <span class="hl">outside forces</span>—the community—that influence learner success.</p>
+    </div>
+
+    <div class="slide-container">
+        <p style="font-family: 'Playfair Display', serif; font-size: 2.8rem; font-style: italic;">
+            "It takes a <span class="hl">village</span> to raise a child."
+        </p>
+        <p style="margin-top: 30px; font-weight: bold;">— African Proverb</p>
+    </div>
+
+    <div class="slide-container">
+        <p style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-style: italic;">
+            "Education is not the filling of a pail, but the <span class="hl">lighting of a fire</span>... and that fire needs the oxygen of the whole community to stay alive."
+        </p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Legal Basis</h1>
+        <p>Education is a <span class="hl">Shared Responsibility</span>. The school is not an island; it is the heart of the community ecosystem.</p>
+    </div>
+
+    <div class="slide-container">
+        <div class="legal-text">
+            <p>
+                "The State shall ensure that the values, needs and aspirations of a school community are reflected in the program of education for the children. <span class="hl">Education shall be the shared responsibility of the entire community.</span>"
+            </p>
+        </div>
+        <p style="margin-top: 30px; font-size: 1.2rem;">
+            — <a href="https://lawphil.net/statutes/repacts/ra2001/ra_9155_2001.html" target="_blank">Republic Act No. 9155</a>, Section 2
+        </p>
+    </div>
+
+    <div class="slide-container">
+        <p>“Aside from teachers and students, who else forms the <span class="hl">Wider School Community</span>?”</p>
+    </div>
+
+    <div class="slide-container">
+        <ul class="bullet-point">
+            <li><span class="hl">Internal:</span> Administrators, Staff, and Students.</li>
+            <li><span class="hl">External:</span> Parents, Alumni, and Business Leaders.</li>
+            <li><span class="hl">Public Partners:</span> Barangay Officials and Socio-civic Organizations.</li>
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <h1>The Reality Check</h1>
+        <p>When 90% of parents fail to attend a meeting, we must move from judgment to <span class="hl">innovation</span>. Teachers must be <span class="hl">Proactive</span>.</p>
+    </div>
+
+    <div class="slide-container">
+        <p>“If traditional meetings fail, what <span class="hl">Alternative Methods</span> can we use to reach busy parents?”</p>
+    </div>
+
+    <div class="slide-container">
+        <ul class="bullet-point">
+            <li><span class="hl">Home Visits:</span> Understanding the learner's environment first-hand.</li>
+            <li><span class="hl">Digital Engagement:</span> Social media groups and SMS for real-time dialogue.</li>
+            <li><span class="hl">Flexible Scheduling:</span> Offering staggered times for working families.</li>
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <h1>The Next Frontier</h1>
+        <p>Communication helps those <span class="hl">already enrolled</span>. But how do we reach the "invisible" learners?</p>
+        <p style="margin-top: 20px;">We move from <span class="hl">engagement</span> to <span class="hl">discovery</span>.</p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Child Mapping</h1>
+        <p>A <span class="hl">data-gathering process</span> to identify potential learners. It ensures the school has an <span class="hl">accurate master list</span> of all 4-17 year olds in the vicinity.</p>
+    </div>
+
+    <div class="slide-container">
+        <h1>The Purpose</h1>
+        <p>The goal is <span class="hl">Universal Access</span>. Identifying out-of-school youth allows schools to coordinate with the <span class="hl">Barangay Council</span> for intervention.</p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Required Information</h1>
+        <ul class="bullet-point">
+            <li><span class="hl">Demographics:</span> Name, Age, Birthday, and Address.</li>
+            <li><span class="hl">Educational Status:</span> Grade level or reason for being out of school.</li>
+            <li><span class="hl">Accessibility:</span> Distance to school and mode of transport.</li>
+            <li><span class="hl">Special Needs:</span> Identifying requirements for SPED or inclusive services.</li>
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <h1>Tool Insight</h1>
+        <p>The actual <span class="hl">Child Mapping Tool (Annex 1B)</span> used for community discovery.</p>
+        <div class="img-placeholder">
+            <img src="childmap-ss.jpg" alt="Child Mapping Tool Screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <p style="display:none; color: var(--accent-gold); padding: 20px;">[childmap-ss.jpg not found in folder]</p>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <p>“Is <span class="hl">Child Mapping</span> just a census, or does it serve a deeper professional purpose?”</p>
+    </div>
+
+    <div class="slide-container">
+        <p>It is a <span class="hl">strategic intervention</span>. It empowers teachers to act as advocates, moving from the classroom to the streets to protect a child's <span class="hl">right to education</span>.</p>
+    </div>
+
+    <div class="slide-container">
+        <h1>Group Activity</h1>
+        <h2>The <span class="hl">Digital Bridge Builder</span></h2>
+        <p>Go to your assigned Breakout Rooms. Use the <a href="https://docs.google.com/document/d/1nJyWk-82BQGTRsp0bo6rKXRWAY-7VHbDp7VR7vq-tmA/edit?usp=sharing" target="_blank" class="hl">Google Doc Link</a> provided in the chat.</p>
+        <ul class="bullet-point">
+            <li>Identify the <span class="hl">Barrier</span> assigned to your room tab.</li>
+            <li>Draft a <span class="hl">3-Sentence Pitch</span>: Method, Message, and Purpose.</li>
+            <li>Be ready to present your "Bridge" in <span class="hl">7 minutes</span>.</li>
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <h1>Summary</h1>
+        <ul class="bullet-point">
+            <li><span class="hl">RA 9155:</span> Education is legally a shared responsibility.</li>
+            <li><span class="hl">Proactive Discovery:</span> Child Mapping finds the "invisible" students.</li>
+            <li><span class="hl">Shared Responsibility:</span> Building trust with parents facilitates the entire educative process.</li>
+        </ul>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)" disabled>Previous</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Next Slide</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide += direction;
+            slides[currentSlide].classList.add('active');
+
+            prevBtn.disabled = (currentSlide === 0);
+            nextBtn.disabled = (currentSlide === slides.length - 1);
+        }
+    </script>
+</body>
+</html>
