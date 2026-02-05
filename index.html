@@ -152,6 +152,13 @@
             background: var(--glass);
             border-radius: 15px;
             overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .img-placeholder:hover {
+            transform: scale(1.02);
+            border-style: solid;
         }
 
         .img-placeholder img {
@@ -280,11 +287,13 @@
 
     <div class="slide-container">
         <h1>Tool Insight</h1>
-        <p>The actual <span class="hl">Child Mapping Tool (Annex 1B)</span> used for community discovery.</p>
-        <div class="img-placeholder">
-            <img src="childmap-ss.jpg" alt="Child Mapping Tool Screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <p style="display:none; color: var(--accent-gold); padding: 20px;">[childmap-ss.jpg not found in folder]</p>
-        </div>
+        <p>The actual <span class="hl">Child Mapping Tool (Annex 1B)</span>. Click the image below to access the full PDF.</p>
+        <a href="childmap-ss.pdf" target="_blank" style="text-decoration: none;">
+            <div class="img-placeholder">
+                <img src="childmap-ss.jpg" alt="Child Mapping Tool Screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <p style="display:none; color: var(--accent-gold); padding: 20px;">[childmap-ss.jpg not found - click here to open PDF]</p>
+            </div>
+        </a>
     </div>
 
     <div class="slide-container">
