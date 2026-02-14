@@ -66,6 +66,49 @@
             margin: 0 auto;
         }
 
+        /* Interactive Quote Styles */
+        .quote-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .quote-box {
+            background: var(--glass);
+            border: 1px solid var(--accent-gold);
+            padding: 20px;
+            width: 45%;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .quote-box:hover {
+            background: rgba(255, 204, 0, 0.1);
+        }
+
+        .explanation {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            border-radius: 0 0 10px 10px;
+            font-style: italic;
+        }
+
+        /* Toggle logic using checkbox hack */
+        .quote-toggle { display: none; }
+        .quote-toggle:checked + .quote-box .explanation {
+            max-height: 200px;
+            padding: 15px;
+            margin-top: 10px;
+            border-top: 1px dashed var(--accent-gold);
+        }
+
         .legal-text {
             font-style: italic;
             border-left: 4px solid var(--accent-gold);
@@ -153,12 +196,6 @@
             border-radius: 15px;
             overflow: hidden;
             cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .img-placeholder:hover {
-            transform: scale(1.02);
-            border-style: solid;
         }
 
         .img-placeholder img {
@@ -202,16 +239,28 @@
     </div>
 
     <div class="slide-container">
-        <p style="font-family: 'Playfair Display', serif; font-size: 2.8rem; font-style: italic;">
-            "It takes a <span class="hl">village</span> to raise a child."
-        </p>
-        <p style="margin-top: 30px; font-weight: bold;">— African Proverb</p>
-    </div>
+        <h1>Voices of Wisdom</h1>
+        <p>Click each box to explore the philosophy behind community partnership.</p>
+        
+        <div class="quote-grid">
+            <input type="checkbox" id="q1" class="quote-toggle">
+            <label for="q1" class="quote-box">
+                <p style="font-family: 'Playfair Display', serif; font-style: italic;">"It takes a <span class="hl">village</span> to raise a child."</p>
+                <p style="font-size: 1rem; margin-top: 10px;">— African Proverb</p>
+                <div class="explanation">
+                    This reminds us that a teacher's effort is only one part of a child's growth; the support of neighbors, leaders, and elders is what completes the education.
+                </div>
+            </label>
 
-    <div class="slide-container">
-        <p style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-style: italic;">
-            "Education is not the filling of a pail, but the <span class="hl">lighting of a fire</span>... and that fire needs the oxygen of the whole community to stay alive."
-        </p>
+            <input type="checkbox" id="q2" class="quote-toggle">
+            <label for="q2" class="quote-box">
+                <p style="font-family: 'Playfair Display', serif; font-style: italic;">"Education is the <span class="hl">lighting of a fire</span>... needing the oxygen of the community."</p>
+                <p style="font-size: 1rem; margin-top: 10px;">— Adapted</p>
+                <div class="explanation">
+                    The "fire" of learning cannot burn in a vacuum. Without community engagement (oxygen), the passion for education eventually dies out.
+                </div>
+            </label>
+        </div>
     </div>
 
     <div class="slide-container">
